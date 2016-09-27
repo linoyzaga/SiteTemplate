@@ -1,0 +1,117 @@
+html {
+    background-color: whitesmoke;
+}
+.body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: ghostwhite;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: skyblue !important;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: dodgerblue !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.btn {
+    color: skyblue;
+    background-color: whitesmoke;
+}
+
+.btn:hover {
+    color: dodgerblue;
+}
+
+footer {
+    background-color: ghostwhite;
+    color: skyblue;
+    padding: 32px;
+}
+
+.homeImgSize {
+    width: 240px;
+    height: 130px !important;
+}
+
+.home-header {
+    color: skyblue;
+    font-family: "Great Vibes", cursive;
+    font-size: 65px;
+    line-height: 50px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    margin-top: 35px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.footerLayout {
+    display: inline-block;
+}
+
+.home-sub-header {
+    color: skyblue;
+    font-size: 25px;
+    font-family: "Libre Baskerville", serif;
+    line-height: 45px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+    padding-top: 0px;
+    padding-bottom: 7px;
+}
+
+.fill {
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: #fec503;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: medium;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+.box{
+    border: hidden;
+}

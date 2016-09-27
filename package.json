@@ -1,0 +1,21 @@
+{
+  "name": "SiteTemplate",
+  "version": "0.0.1",
+  "description": "My new application for planning trips",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0"
+},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linoyzaga/SiteTemplate.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "author": "Linoy Zaga"
+}

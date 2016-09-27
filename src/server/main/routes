@@ -1,0 +1,39 @@
+var mongojs = require("mongojs");
+var Main = require('../db/db').Main;
+var express = require('express');
+var router = express.Router();
+
+// Get all locations
+router.get('/', function(req, res) {
+    Main.find(function (err, docs) {
+
+        // Check the connection completed
+        if (err) {
+            console.log('Unable to connect to the mongoDB server. Error:', err);
+        }
+        else {
+
+            // Return value
+            res.send({location: docs});
+        }
+    });
+});
+
+// Get all sites for specific location
+router.get('/:id', function(req, res) {
+
+    // db.sites.find({"locationID" : "req.body.locationID"}, function (err, docs) {
+    Main.find(function (err, docs) {
+
+        // Check the connection completed
+        if (err) {
+            console.log('Unable to connect to the mongoDB server. Error:', err);
+        }
+        else {
+            // Return value
+            res.send({location: docs});
+        }
+    });
+});
+
+module.exports = router;
