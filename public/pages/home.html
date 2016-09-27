@@ -1,155 +1,32 @@
-<!-- Header Carousel -->
-<header id="myCarousel" class="carousel slide">
+<!-- Build a title -->
+<header id="title">
+    <div class="jumbotron text-center">
+        <h2 class="home-header">App</h2>
+        <p class="home-sub-header">This app is all about blabla!</p>
 
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('images/locations/ny.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>New York City</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('images/locations/paris.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Paris</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('images/locations/london.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>London</h2>
-            </div>
-        </div>
+        <!-- Subscribe for new info-->
+        <form class="form-inline">
+            <input type="email" class="form-control" size="40" placeholder="Email address" required="required" ng-model="emailForm">
+            <button type="button" class="btn" ng-click="emailSend()">Stay in Touch</button>
+        </form>
     </div>
 </header>
 
-<!-- Build a title -->
-<div class="container text-center">
-    <h2 class="home-header">TRIPY</h2>
-    <p class="home-sub-header">The easyest way planning your next trip!</p>
-
-    <!-- Subscribe for new info-->
-    <form class="form-inline">
-        <input type="email" class="form-control" size="40" placeholder="Email address" required="required" ng-model="emailForm">
-        <button type="button" class="btn" ng-click="emailSend()">Stay in Touch</button>
-    </form>
-</div>
-<br>
-<br>
-
-<!-- Build the services the web site offer-->
-<div class="col-md-4 col-sm-6 col-xs-12">
-    <div class="thumbnail thumbnail4 box">
-        <img class="homeImgSize" src="images/sites.jpg" alt="">
-        <div class="caption">
-            <h4>
-                            <a href="#sites">Tourist Sites</a>
-                        </h4>
-            <p>
-                This link lets you choose your trip destination, choose all the tourist sites you would like to visit, plan a map and print it all. So easy to plan, and having so much fun
-            </p>
-            <a href="#sites" data-title="Read More" class="btn-link"><span>Read More</span></a>
-        </div>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 col-xs-12">
-    <div class="thumbnail thumbnail4 box">
-        <img class="homeImgSize" src="images/helpUs.jpg" alt="">
-        <div class="caption">
-            <h4>
-                <a href="#helpus">Help Us</a>
-            </h4>
-            <p>
-                Be a part of this amazing application and help us adding more and more destinations on the map and more and more tourists sites, rank them and share your experience.
-            </p>
-            <a href="#helpus" data-title="Read More" class="btn-link"><span>Read More</span></a>
-        </div>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 col-xs-12">
-    <div class="thumbnail thumbnail4 box">
-        <img class="homeImgSize" src="images/aboutUs.jpg" alt="">
-        <div class="caption">
-            <h4>
-                            <a href="#about">
-                                About Us
-                            </a>
-                        </h4>
-            <p>
-                Check out who are we any why we build this application, share your comments and so we can improve this application.
-            </p>
-            <a href="#about" data-title="Read More" class="btn-link"><span>Read More</span></a>
-        </div>
-    </div>
-</div>
-
-<section id="about">
+<section id="locationsTable">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">How does it work?</h2>
-                <h3 class="section-subheading text-muted">follow the instraction below:</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about2.jpg" alt="">
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Pick a Location</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Choose your destination on the link of "Tourist Sites" and clilck it.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about1.jpg" alt="">
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Pick up sites</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Choose the sites you would like to see on your trip and check them. Also put your travel duration. Then click on the button "Plan a Trip!".</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about3.jpg" alt="">
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>See your tracking plan</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Check out the track plan we got for you, print it and take it to your trip.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>Now You
-                                    <br>are ready
-                                    <br>Travling!</h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <table class="table table-condensed">
+            <thead class="text-center">
+                <th>ID</th>
+                <th>Location Name</th>
+                <th>Image Path</th>
+            </thead>
+            <tbody ng-repeat="locatin in allLocations">
+                <tr>
+                    <td>location.id</td>
+                    <td>location.name</td>
+                    <td>location.image</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>

@@ -1,10 +1,10 @@
-var mongojs = require("mongojs");
-var db = mongojs('mongodb://admin:123456@ds139725.mlab.com:39725/tripydb', ['Locations']);
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://admin:123456@ds139725.mlab.com:39725/tripydb');
 
-var Main = mongojs.model('Locations', {
-    task: String,
-    isCompleted: Boolean,
-    isEditing: Boolean
+var Locations = mongoose.model('Locations', {
+    id: String,
+    name: String,
+    image: String
 });
 
-module.exports.Main = Main;
+module.exports.Locations = Locations;

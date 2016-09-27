@@ -18,19 +18,6 @@ TripApp.directive('starRating', function () {
                     scope.stars.push({filled: i < scope.ratingValue});
                 }
             };
-
-            scope.toggle = function (index) {
-                scope.ratingValue = index + 1;
-                scope.onRatingSelected({
-                    rating: index + 1
-                });
-            };
-
-            scope.$watch('ratingValue', function (oldVal, newVal) {
-                if (newVal) {
-                    updateStars();
-                }
-            });
         }
     }
 });

@@ -1,28 +1,19 @@
-TripApp.controller('mainCtrl', ['$scope', 'sentEmailInfo', function ($scope, sentEmailInfo) {
+TripApp.controller('mainCtrl', ['$scope', 'getLocations', function ($scope, getLocations) {
 
     // Scrolling the page up
     window.scrollTo(0, 0);
 
-    // Carousel movment
-    $('.carousel').carousel({
-        interval: 3000
-    })
-    
-    $scope.emailSend = function () {
-        sentEmailInfo.sendInfo($scope.emailForm).success(function(data) {
+    // Init the variables
+    this.allLocations = {};
 
-            // Check if th form is full
-            if ($scope.emailForm != undefined) {
-                BootstrapDialog.show({message: 'Thank you!'});
+    // Getting all the locations from the server
+    getLocations.getAllLocations().success(function(data){
+        debugger;
 
-                // Clear the email box
-                $scope.emailForm = undefined;
+        // Save all the locations
+        this.allLocations = data;
 
-            } else {
-                BootstrapDialog.show({message: 'Please eter your email address.'});
-            }
-        }).error(function(data){
-            console.log(data);
-        });
-    }
+    }).error(function(data){
+        console.log(data);
+    });
 }]);
