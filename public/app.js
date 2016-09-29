@@ -7,7 +7,7 @@ TripApp.config(function($routeProvider) {
 
         // Route for the home page
         .when('/', {
-            templateUrl : 'pages/home.html',
+            templateUrl : 'appModule/home.html',
             controller  : 'mainCtrl'
         })
 

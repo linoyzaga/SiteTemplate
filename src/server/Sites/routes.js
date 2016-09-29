@@ -1,21 +1,19 @@
 var mongoose = require('mongoose');
-var Locations = require('../db/db').Locations;
 var express = require('express');
+var Sites = require('./db').Sites;
 var router = express.Router();
 
 // Get all locations
 router.get('/', function(req, res) {
-    Locations.find(function (err, docs) {
+    Sites.find(function (err, docs) {
 
         // Check the connection completed
         if (err) {
             console.log('Unable to connect to the mongoDB server. Error:', err);
         }
 
-        console.log(docs);
-
         // Return value
-        res.sendFile(docs);
+        res.send(docs);
     });
 });
 

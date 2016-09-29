@@ -16,15 +16,23 @@
     <div class="container">
         <table class="table table-condensed">
             <thead class="text-center">
-                <th>ID</th>
-                <th>Location Name</th>
-                <th>Image Path</th>
+                <th>Site Name</th>
+                <th>Rating</th>
+                <th>Address</th>
+                <th>Activity Hours</th>
+                <th>History</th>
+                <th>Public Transport</th>
+                <th>Price</th>
             </thead>
-            <tbody ng-repeat="locatin in allLocations">
-                <tr>
-                    <td>location.id</td>
-                    <td>location.name</td>
-                    <td>location.image</td>
+            <tbody>
+                <tr ng-repeat="site in sites">
+                    <td>{{site.name}}</td>
+                    <td>{{site.rating}}</td>
+                    <td>{{site.address}}</td>
+                    <td>{{site.activityHours}}</td>
+                    <td>{{site.history}}</td>
+                    <td>{{site.publicTransport}}</td>
+                    <td>{{site.price}}</td>
                 </tr>
             </tbody>
         </table>

@@ -3,15 +3,13 @@
 // modules ============================================================================================================
 var express = require('express');
 var app = express();
-var bodyparser = require("body-parser");
-var routes = require('./src/server/routes');
 var path = require('path');
+var bodyParser = require('body-parser');
+var routes = require('./src/server/routes');
 
 // configuration ======================================================================================================
 var PORT = process.env.PORT || 3000;
-app.use(bodyparser.json());
-
-// Function ===========================================================================================================
+app.use(bodyParser.json());
 
 // Used for production build
 app.use(express.static(path.join(__dirname, 'public')));
